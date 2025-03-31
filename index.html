@@ -16,8 +16,26 @@
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
+      :root {
+        --color-yellow: #f4d04e;
+        --color-white: #ffffff;
+        --color-gray-500: #6b6b6b;
+        --color-gray-950: #111111;
+
+        --fs-l: clamp(1.25rem, 1.5vw, 1.5rem);
+        --fs-m: clamp(0.8rem, 1.5vw, 1rem);
+        --fs-s: clamp(0.8rem, 1.5vw, 0.8rem);
+
+        --fw-bold: 700;
+        --fw-medium: 500;
+
+        --ff-figtree: "Figtree", sans-serif;
+      }
+
       * {
         box-sizing: border-box;
+        margin: 0;
+        padding: 0;
       }
 
       .attribution {
@@ -31,39 +49,68 @@
       }
 
       body {
-        padding: 0;
-        margin: 0;
+        background-color: var(--color-yellow);
+        font-family: var(--ff-figtree);
+        line-height: 1.5;
+        letter-spacing: 0px;
 
-        background-color: hsl(47, 88%, 63%);
-        font-family: "Figtree", sans-serif;
-        font-size: 1rem;
         display: flex;
         height: 100vh;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        font-size: 16px;
-        line-height: 150%;
-        letter-spacing: 0px;
       }
 
       .card {
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1rem;
-        border-radius: 20px;
+        background-color: var(--color-white);
         width: 384px;
         padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        border-radius: 20px;
         border: 1px solid black;
         box-shadow: 8px 8px 0px 0px black;
+      }
+
+      .image img {
+        border-radius: 10px;
+      }
+
+      .tags {
+        font-size: var(--fs-s);
+        font-weight: var(--fw-bold);
+        padding: 4px 12px;
+        background-color: var(--color-yellow);
+        width: fit-content;
+        border-radius: 4px;
+      }
+
+      .date {
+        font-size: var(--fs-s);
+        line-height: 150%;
+      }
+
+      .title {
+        font-size: var(--fs-l);
+        font-weight: var(--fw-bold);
+        /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+        cursor: pointer;
+      }
+
+      .title:hover {
+        color: var(--color-yellow);
       }
 
       .content {
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
+      }
+
+      .description {
+        font-size: var(--fs-m);
+        color: var(--color-gray-500);
       }
 
       .author {
@@ -82,39 +129,6 @@
         width: 32px;
         height: 32px;
       }
-
-      .image img {
-        border-radius: 10px;
-      }
-
-      .title {
-        font-size: 22px;
-        font-weight: 900;
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        line-height: 150%;
-        letter-spacing: 0px;
-      }
-
-      .description {
-        font-size: 14px;
-        color: #6b6b6b;
-        line-height: 150%;
-        letter-spacing: 0px;
-      }
-
-      .date {
-        font-size: 14px;
-        line-height: 150%;
-      }
-
-      .tags {
-        font-size: 14px;
-        font-weight: 700;
-        padding: 4px 12px;
-        background-color: #f4d04e;
-        width: fit-content;
-        border-radius: 4px;
-      }
     </style>
   </head>
   <body>
@@ -123,14 +137,14 @@
         <img alt="image" src="./assets/images/illustration-article.svg" />
       </div>
       <div class="content">
-        <div class="tags">Learning</div>
-        <div class="date">Published 21 Dec 2023</div>
+        <p class="tags">Learning</p>
+        <p class="date">Published 21 Dec 2023</p>
 
-        <div class="title">HTML & CSS foundations</div>
-        <div class="description">
+        <h1 class="title">HTML & CSS foundations</h1>
+        <p class="description">
           These languages are the backbone of every website, defining structure,
           content, and presentation.
-        </div>
+        </p>
       </div>
 
       <div class="author">
@@ -140,7 +154,7 @@
           src="./assets/images/image-avatar.webp"
         />
 
-        <div class="name">Greg Hooper</div>
+        <p class="name">Greg Hooper</p>
       </div>
     </div>
 
