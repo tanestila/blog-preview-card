@@ -51,13 +51,19 @@
         background-color: white;
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 1rem;
         padding: 1rem;
         border-radius: 20px;
         width: 384px;
         padding: 24px;
         border: 1px solid black;
         box-shadow: 8px 8px 0px 0px black;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
       }
 
       .author {
@@ -109,13 +115,15 @@
       <div class="image">
         <img src="./assets/images/illustration-article.svg" />
       </div>
-      <div class="tags">Learning</div>
-      <div class="date">Published 21 Dec 2023</div>
+      <div class="content">
+        <div class="tags">Learning</div>
+        <div class="date">Published 21 Dec 2023</div>
 
-      <div class="title">HTML & CSS foundations</div>
-      <div class="description">
-        These languages are the backbone of every website, defining structure,
-        content, and presentation.
+        <div class="title">HTML & CSS foundations</div>
+        <div class="description">
+          These languages are the backbone of every website, defining structure,
+          content, and presentation.
+        </div>
       </div>
 
       <div class="author">
